@@ -2,11 +2,6 @@ package Strings;
 
 
 public class StringFunctions {
-    public static void main(String[] args) {
-
-        System.out.println(deleteLastWord("Саша,гулять, пошел"));
-    }
-
     public static void lengthOfSmallestWord(String s) {
         String[] words = s.split(" ");
         int min = words[0].length();
