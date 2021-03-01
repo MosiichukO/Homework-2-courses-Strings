@@ -4,7 +4,7 @@ package Strings;
 public class StringFunctions {
     public static void main(String[] args) {
 
-        System.out.println(reverse("Саша,гулять, пошел"));
+        System.out.println(deleteLastWord("Саша,гулять, пошел"));
     }
 
     public static void lengthOfSmallestWord(String s) {
@@ -61,10 +61,19 @@ public class StringFunctions {
         return str.replace(str.substring(startIndex, (startIndex + length)), "");
     }
 
-    public static String reverse (String str) {
-        StringBuilder StrB = new StringBuilder(str);
-        return StrB.reverse().toString();
+    public static String reverse(String str) {
+        StringBuilder strB = new StringBuilder(str);
+        return strB.reverse().toString();
     }
 
-
+    public static String deleteLastWord(String str) {
+        int a = str.length();
+        for (int i = str.length() - 1; i >= 0; i--) {
+            if (str.charAt(i) == ' ') {
+                a = i;
+                break;
+            }
+        }
+        return str.substring(0, a);
+    }
 }
