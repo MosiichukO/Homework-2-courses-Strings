@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 public class StringFunctions {
     public static void main(String[] args) {
 
-        System.out.println(uniqueSymbol("Саша,гулять, пошел"));
+        System.out.println(deletePart("Саша,гулять, пошел", 3, 2));
     }
 
     public static void lengthOfSmallestWord(String s) {
@@ -50,5 +50,18 @@ public class StringFunctions {
             }
         }
         return result;
+    }
+
+    public int amountOfWords(String str) {
+        String[] words = str.split(" ");
+        int amount = 0;
+        for (int i = 0; i < words.length; i++) {
+            amount++;
+        }
+        return amount;
+    }
+
+    public static String deletePart(String str, int startIndex, int length) {
+        return str.replace(str.substring(startIndex, (startIndex + length)), "");
     }
 }
