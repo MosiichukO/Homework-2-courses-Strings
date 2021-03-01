@@ -1,14 +1,10 @@
 package Strings;
 
 
-import java.util.Arrays;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 public class StringFunctions {
     public static void main(String[] args) {
 
-        System.out.println(deletePart("Саша,гулять, пошел", 3, 2));
+        System.out.println(reverse("Саша,гулять, пошел"));
     }
 
     public static void lengthOfSmallestWord(String s) {
@@ -61,7 +57,14 @@ public class StringFunctions {
         return amount;
     }
 
-    public static String deletePart(String str, int startIndex, int length) {
+    public String deletePart(String str, int startIndex, int length) {
         return str.replace(str.substring(startIndex, (startIndex + length)), "");
     }
+
+    public static String reverse (String str) {
+        StringBuilder StrB = new StringBuilder(str);
+        return StrB.reverse().toString();
+    }
+
+
 }
