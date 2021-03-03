@@ -2,27 +2,31 @@ package Strings;
 
 public class ConversionFunctions {
 
-    public static void integerToString(int x) {
+    public static String integerToString(int x) {
         System.out.println(Integer.toString(x));
+        return Integer.toString(x);
     }
 
-    public static void doubleToString(double x) {
+    public static String doubleToString(double x) {
         System.out.println(Double.toString(x));
+        return Double.toString(x);
     }
 
-    public static void stringToInteger(String x) {
+    public static int stringToInteger(String x) {
         try {
             System.out.println(Integer.parseInt(x));
         } catch (NumberFormatException exception) {
             System.err.println("Incorrect format");
         }
+        return Integer.parseInt(x);
     }
 
-    public static void stringToDouble(String x) {
+    public static double stringToDouble(String x) {
         try {
             System.out.println(Double.parseDouble(x));
         } catch (NumberFormatException exception) {
             System.err.println("Incorrect format");
         }
+        return Double.parseDouble(x);
     }
 }

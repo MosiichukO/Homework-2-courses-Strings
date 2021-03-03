@@ -2,6 +2,7 @@ package Strings;
 
 public class OneLine {
     public static void main(String[] args) {
+        englishAlphabetUppercase();
     }
 
     public static void englishAlphabetUppercase () {
